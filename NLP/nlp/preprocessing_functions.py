@@ -21,10 +21,10 @@ def remove_https_urls_from_string(text) -> str:
     return url_pattern.sub('', text)
 
 # REMOVE DOMAIN-BASED URLs
-def remove_domain_urls_from_string(article):
+def remove_domain_urls_from_string(series: pd.Series):
     domain_suffixes = ['com', 'net', 'org', 'edu', 'uk', 'de', 'nl', 'us']
     pattern = r'\w+\s+(?:' + '|'.join(domain_suffixes) + r')\b'
-    return re.sub(pattern, '', article).strip() 
+    return re.sub(pattern, '', series).strip() 
 
 # REMOVE BOTH URL TYPES
 def remove_all_urls(series: pd.Series) -> pd.Series:
@@ -60,4 +60,5 @@ def lemmatize_text(text: str) -> str:
         return ' '.join(lemmatized_words)
     
 def lemmatize_words(series:pd.Series) -> pd.Series:
+    series = series.copy()
     return series.apply(lemmatize_text)
