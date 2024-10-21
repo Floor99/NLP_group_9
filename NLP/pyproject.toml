@@ -10,6 +10,7 @@ python = "^3.11"
 pandas = "^2.2.3"
 nltk = "^3.9.1"
 spacy = "^3.8.2"
+pyarrow = "^17.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
