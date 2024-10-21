@@ -58,15 +58,15 @@ def remove_stopwords(series:pd.Series, language:str= "english") -> pd.Series:
     return series.apply(lambda x: [word for word in x if word not in stopwords.words(language)])
 
 # LEMMATIZE WORDS 
-def lemmatize_text(text: str) -> str:
-    text = ' '.join(text)
-    doc = nlp(text) 
-    lemmatized_words = [token.lemma_ for token in doc]  
-    return lemmatized_words
+# def lemmatize_text(text: str) -> str:
+#     text = ' '.join(text)
+#     doc = nlp(text) 
+#     lemmatized_words = [token.lemma_ for token in doc]  
+#     return lemmatized_words
     
-def lemmatize_words(series:pd.Series) -> pd.Series:
-    series = series.copy()
-    return series.apply(lemmatize_text)
+# def lemmatize_words(series:pd.Series) -> pd.Series:
+#     series = series.copy()
+#     return series.apply(lemmatize_text)
 
 def lemmatize(series:pd.Series) -> pd.Series:
     series = series.copy()
