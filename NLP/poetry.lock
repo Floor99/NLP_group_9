@@ -593,6 +593,20 @@ test-full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "cloudpickle", "dask", "d
 tqdm = ["tqdm"]
 
 [[package]]
+name = "fst-pso"
+version = "1.8.1"
+description = "Fuzzy Self-Tuning PSO global optimization library"
+optional = false
+python-versions = "*"
+files = [
+    {file = "fst-pso-1.8.1.tar.gz", hash = "sha256:b3d16ec27b0b4d36b35b306af40c00cd0b34e5e0a9e30a71ed02490e8954a26a"},
+]
+
+[package.dependencies]
+miniful = "*"
+numpy = "*"
+
+[[package]]
 name = "funcy"
 version = "2.0"
 description = "A fancy and practical functional tools"
@@ -602,6 +616,23 @@ files = [
     {file = "funcy-2.0-py2.py3-none-any.whl", hash = "sha256:53df23c8bb1651b12f095df764bfb057935d49537a56de211b098f4c79614bb0"},
     {file = "funcy-2.0.tar.gz", hash = "sha256:3963315d59d41c6f30c04bc910e10ab50a3ac4a225868bfa96feed133df075cb"},
 ]
+
+[[package]]
+name = "fuzzytm"
+version = "2.0.9"
+description = "A Python package for Fuzzy Topic Models"
+optional = false
+python-versions = "*"
+files = [
+    {file = "FuzzyTM-2.0.9-py3-none-any.whl", hash = "sha256:e5a6beb619f9090badebcdc161a9b9b2b7ee26ca44940894cabac1d8297c9551"},
+    {file = "FuzzyTM-2.0.9.tar.gz", hash = "sha256:cf411262d07b06ab2cc481e5addd05fbfa9aa4e3359eb0e2dd98a1e52be00c66"},
+]
+
+[package.dependencies]
+numpy = "*"
+pandas = "*"
+pyfume = "*"
+scipy = "*"
 
 [[package]]
 name = "gensim"
@@ -1216,6 +1247,20 @@ files = [
 
 [package.dependencies]
 traitlets = "*"
+
+[[package]]
+name = "miniful"
+version = "0.0.6"
+description = "Minimal Fuzzy Library"
+optional = false
+python-versions = "*"
+files = [
+    {file = "miniful-0.0.6.tar.gz", hash = "sha256:642c9f36b87c81b3efc29947379b5b99b8d33185c904a7bc320d89a8e1871429"},
+]
+
+[package.dependencies]
+numpy = ">=1.12.0"
+scipy = ">=1.0.0"
 
 [[package]]
 name = "mpmath"
@@ -1943,6 +1988,25 @@ files = [
 ]
 
 [[package]]
+name = "pyfume"
+version = "0.3.1"
+description = "A Python package for fuzzy model estimation"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "pyFUME-0.3.1-py3-none-any.whl", hash = "sha256:ff69627e7551cc734a153e1083f68ec273e8c6e1d8953da2b7cae575420a7e64"},
+    {file = "pyFUME-0.3.1.tar.gz", hash = "sha256:f09f6a85269395bfca8828de82673c89a19a64e5c9d0f93512ab8e4c4514b56d"},
+]
+
+[package.dependencies]
+fst-pso = "*"
+numpy = "*"
+pandas = "*"
+scipy = "*"
+simpful = "*"
+typing-extensions = "*"
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -2637,6 +2701,24 @@ test = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "ini2toml[lite] (>=
 type = ["importlib-metadata (>=7.0.2)", "jaraco.develop (>=7.21)", "mypy (==1.11.*)", "pytest-mypy"]
 
 [[package]]
+name = "simpful"
+version = "2.12.0"
+description = "A user-friendly Python library for fuzzy logic"
+optional = false
+python-versions = "*"
+files = [
+    {file = "simpful-2.12.0-py3-none-any.whl", hash = "sha256:333b5ec7daa199f9b87839d845f5f0aa318a98c4066e7e3b7e66e4beb18ff95e"},
+    {file = "simpful-2.12.0.tar.gz", hash = "sha256:9c1290f0ad1b6674cb1567df055a809535924c714a6830f0a4aa0a8a3d60dddb"},
+]
+
+[package.dependencies]
+numpy = ">=1.12.0"
+scipy = ">=1.0.0"
+
+[package.extras]
+plotting = ["matplotlib (>=3.5.1)", "seaborn (>=0.11.2)"]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -3294,4 +3376,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "2da9f1dd7d3cf8576d139076dbe524b18a4f424487f247aec92b89ebe1299115"
+content-hash = "16ab636c10b2755379c0d8cd65808a7ed465ddf4298af6efdad9f87ab80169d8"
